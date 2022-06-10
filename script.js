@@ -8,9 +8,11 @@ var page = 1;
 
 //DOM Elements
 const sForm = document.getElementById("search-form");
+const nPlayingLabel = document.querySelector(".now-playing");
 const mGrid = document.getElementById("movies-grid");
 const mButton = document.getElementById("load-more-movies-btn");
 const cButton = document.getElementById("close-search-btn");
+
 
 async function getNPResults(){
     cButton.classList.add("hidden");
@@ -27,15 +29,17 @@ async function getResults(word){
     return jsonResponse;
 }
 
+
 function generateHTML(mData){
     for(let i = 0; i < mData.results.length; i++ ){
-        let pUrl = "https://image.tmdb.org/t/p/w300" + mData.results[i].poster_path;
+        let pUrl = "https://image.tmdb.org/t/p/w500" + mData.results[i].poster_path;
         if(mData.results[i].poster_path == null){
             pUrl = "no_poster.png";
         }
+        let mID = mData.results[i].id;
         let vUrl = mData.results[i].vote_average;
         let tUrl = mData.results[i].title;
-        mGrid.innerHTML += ' <div class= "movie-card"><img class= "movie-poster" src= "'+pUrl+'" alt= "'+tUrl+'"></img><h3 class= "movie-votes">⭐ '+vUrl+'</h3><h3 class= "movie-title">'+tUrl+'</h3></div>'
+        mGrid.innerHTML += ' <div class= "movie-card"><img class= "movie-poster" id= "'+mID+'" src= "'+pUrl+'" alt= "'+tUrl+'"></img><h3 class= "movie-votes">⭐ '+vUrl+'</h3><h3 class= "movie-title">'+tUrl+'</h3></div>'
     }
 }
 
@@ -45,8 +49,10 @@ async function handleNP(){
     page = 1;
     const mResults = await getNPResults();
     generateHTML(mResults);
-    mButton.classList.remove("hidden");
+    nPlayingLabel.classList.remove("hidden");
 }
+
+cButton.addEventListener("click", handleNP);
 
 async function handleForm(evt){
     evt.preventDefault();
@@ -56,8 +62,8 @@ async function handleForm(evt){
     const mResults = await getResults(searchWord);
     generateHTML(mResults);
     evt.target.sWord.value = '';
+    nPlayingLabel.classList.add("hidden");
     cButton.classList.remove("hidden");
-    mButton.classList.remove("hidden");
 }
 
 sForm.addEventListener("submit",handleForm);
@@ -76,6 +82,6 @@ async function handleShowMore(evt){
 }
 
 mButton.addEventListener("click", handleShowMore);
-cButton.addEventListener("click", handleNP);
+
 
 window.onload = handleNP();

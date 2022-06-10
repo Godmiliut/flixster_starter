@@ -3,7 +3,7 @@
 }
 
 body {
-    background: #373232;
+    background: #201e1e;
     color: white;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -12,23 +12,28 @@ body {
 }
 
 .header {
-    margin: 5px;
+    margin: 0px;
 }
 .header img{
-    max-width: 40px;
-    max-height: 40px;
-    vertical-align:center;
+    max-width: 70px;
+    max-height: 70px;
+    vertical-align: text-bottom;
 }
 
 h1 {
+    font-size: 70px;
     text-transform: uppercase;
-    text-align: center;
-    vertical-align: center;
-    padding: 20px;
+    vertical-align: baseline;
+}
+
+h2 {
+    margin-left: 10px;
+    text-align: left;
 }
 
 h3 {
     line-height:normal;
+    text-align:left
 } 
 
 #search-form {
@@ -38,6 +43,8 @@ h3 {
 
 #search-input {
     width: 250px;
+    margin-right: 10px;
+    align-items: center;
 }
 
 .search-btn {
@@ -47,8 +54,14 @@ h3 {
     color: white;
     border-radius: 3px;
     cursor: pointer;
-    margin-left: 10px;
 }
+
+.search-btn img {
+    margin-left: 10px;
+    width: auto;
+    height: 10px;
+}
+
 
 #movies-grid {
     display: flex;
@@ -60,16 +73,47 @@ h3 {
 .movie-card {
     flex: 0 0 25%;
     padding: 10px;
-    width: 10px;
+    width: 15px;
     height: auto;
     justify-content: left;
 }
 
 .movie-card img{
-    object-fit: fill;
+    width: 100%;
+    transition: 200ms ease-in-out;
 }
 
+.popup-container {
+ background-color: rgb(255, 255, 255, 0.4);
+ opacity: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 100vh;
+ width: 100vw;
+ pointer-events: none;
+}
+
+.popup {
+    border-radius: 6px;
+    background: white;
+    color: black;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#close-popup {
+    justify-content: right;
+}
 
 .hidden {
     display: none;
+}
+
+.movie-poster:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 5px 5px rgba(255, 255, 255, 0.2);
 }
