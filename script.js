@@ -13,7 +13,9 @@ const mGrid = document.getElementById("movies-grid");
 const mButton = document.getElementById("load-more-movies-btn");
 const cButton = document.getElementById("close-search-btn");
 
-
+/*  Called upon page load and @cButton click
+    Returns json file containing Now Playing movies  
+*/
 async function getNPResults(){
     cButton.classList.add("hidden");
     let aUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + aKey + "&language=en-US&page=" + page;
@@ -22,6 +24,10 @@ async function getNPResults(){
     return jsonResponse;
 }
 
+/*  Called upon form submission
+    returns json file containing movies associated with the search word obtained
+    @@word search word to be used as a query
+*/
 async function getResults(word){
     let aUrl = "https://api.themoviedb.org/3/search/movie?api_key=" + aKey + "&language=en-US&query=" + word + "&page=" + page + "&include_adult=false";
     const response = await fetch(aUrl);
@@ -30,6 +36,9 @@ async function getResults(word){
 }
 
 
+/*  Retrieves a json file as a paremeter and injects the desired info from the movies into the @mGird
+    @@mData jsonFile to be iterated through
+*/
 function generateHTML(mData){
     for(let i = 0; i < mData.results.length; i++ ){
         let pUrl = "https://image.tmdb.org/t/p/w500" + mData.results[i].poster_path;
@@ -43,6 +52,7 @@ function generateHTML(mData){
     }
 }
 
+//  Calls the getNPResults function and displays the Now Playing movies
 async function handleNP(){
     mGrid.innerHTML = '';
     searchWord = '';
@@ -54,6 +64,10 @@ async function handleNP(){
 
 cButton.addEventListener("click", handleNP);
 
+/*  Calls the getResults function and displays the movies associated with the word submitted
+    resets the @page value to 1 and displays the @nplayingLabel and the @cButton
+    @@evt accepts the event that triggered it as a parameter
+*/
 async function handleForm(evt){
     evt.preventDefault();
     page = 1;
@@ -68,6 +82,7 @@ async function handleForm(evt){
 
 sForm.addEventListener("submit",handleForm);
 
+// Injects more movies to the @mGrid by calling getResults or getNPResults with an updated @page value.
 async function handleShowMore(evt){
     page++;
     let mResults = '';
@@ -83,5 +98,5 @@ async function handleShowMore(evt){
 
 mButton.addEventListener("click", handleShowMore);
 
-
+//display the Now Playing movies upon load.
 window.onload = handleNP();

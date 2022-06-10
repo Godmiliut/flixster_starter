@@ -6,7 +6,7 @@ Submitted by: Gabriel Bremo
 
 Estimated time spent: 14 hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://godmiliut.github.io/flixster_starter/)
 
 ### Application Features
 
@@ -42,28 +42,32 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-(https://www.loom.com/embed/c0526b8113f047809d5370e7ab1a99c5)
+![readme gif](https://user-images.githubusercontent.com/91387413/173156271-c295f6f0-b084-4f2a-941d-155e1124d78a.gif)
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics covered throughout the week were fundamental for the completion of this project. By introducing us to the structure and syntax of HTML and its collaborative behavior with CSS and JavaScript, we counted with the basics in order to accomplish the core features. Moreover, the implementation of the stretch features are more than possible with the help of a little research and peer or instructor assistance in the case of getting suck.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had have more time, I would have definitely worked on implementing the pop-up feature, I believe it completes the general idea of this project and serves to earn additional skills. Additionally, I would have touched up the css component of my project in order to make it more personal and unique.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+My project demo went pretty smoothly in general, the instructors and peers provided a really welcoming enviroment which gave way to constructive feedback and the sharing of different approaches.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- https://reactgo.com/clear-input-value-javascript/#:~:text=To%20clear%20the%20above%20input%20field%20by%20clicking,const%20inputField%20%3D%20document.getElementById%28%22name%22%29%3B%20const%20btn%20%3D%20document.getElementById%28%22btn%22%29%3B
+
+- https://developers.themoviedb.org/3/getting-started/authentication
+
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-properties
+
+- https://www.geeksforgeeks.org/how-to-add-videos-on-readme-md-file-in-a-github-repository/https://www.geeksforgeeks.org/how-to-add-videos-on-readme-md-file-in-a-github-repository/
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Big shout out to the TAs and the instructor for the assistance provided throughout this week, and a special thanks to Kiara Bermudez for helping me out with the CSS of my project.
