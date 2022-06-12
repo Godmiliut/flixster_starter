@@ -42,6 +42,8 @@ Deployed Application (optional): [Flixster Deployed Site](https://godmiliut.gith
 
 ### Walkthrough Video
 
+![readme gif](https://user-images.githubusercontent.com/91387413/173212089-01eed6b3-83a5-4b4c-bce3-9237731aaab5.gif)
+
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
