@@ -4,7 +4,7 @@
 
 Submitted by: Gabriel Bremo
 
-Estimated time spent: 14 hours spent in total
+Estimated time spent: 20 hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](https://godmiliut.github.io/flixster_starter/)
 
