@@ -52,7 +52,7 @@ The topics covered throughout the week were fundamental for the completion of th
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-If I had have more time, I would have definitely worked on implementing the pop-up feature, I believe it completes the general idea of this project and serves to earn additional skills. Additionally, I would have touched up the css component of my project in order to make it more personal and unique.
+If I had have more time, I would have definitely worked on implementing the embedding video feature, I believe it completes the general idea of this project and serves to earn additional skills. Additionally, I would have touched up the css component of my project in order to make it more personal and unique.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
